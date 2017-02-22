@@ -173,7 +173,7 @@ export default class extends think.controller.base {
 
 ```js
 export default class extends think.model.base {
-  getMin(){
+  getCount(){
     //查询 status 为 publish 的总条数
     return this.where({status: 'publish'}).count();
   }
@@ -186,7 +186,7 @@ export default class extends think.model.base {
 
 ```js
 export default class extends think.model.base {
-  getMin(){
+  getSum(){
     //查询 status 为 publish 字段 view_nums 的总和
     return this.where({status: 'publish'}).sum('view_nums');
   }
@@ -199,7 +199,7 @@ export default class extends think.model.base {
 
 ```js
 export default class extends think.model.base {
-  getMin(){
+  getMax(){
     //查询 status 为 publish，字段 comments 的最大值
     return this.where({status: 'publish'}).max('comments');
   }
